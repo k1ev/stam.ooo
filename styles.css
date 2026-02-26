@@ -1,0 +1,353 @@
+/* ============================================
+   STAM — Terminal Aesthetic
+   stam.ooo | 01001011.Apps
+   ============================================ */
+
+/* Reset */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    --bg: #0d0d0d;
+    --green: #00ff41;
+    --grey: #c0c0c0;
+    --white: #ffffff;
+    --dim: #555555;
+    --font: "IBM Plex Mono", "Fira Code", "Source Code Pro", monospace;
+}
+
+/* Base */
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--grey);
+    font-family: var(--font);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: var(--green);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+::selection {
+    background: var(--green);
+    color: var(--bg);
+}
+
+/* Status Bar */
+.status-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 1.5rem;
+    border-bottom: 1px solid #1a1a1a;
+    font-size: 0.75rem;
+    color: var(--dim);
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    z-index: 100;
+}
+
+.status-bar .dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: var(--green);
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+    box-shadow: 0 0 6px var(--green);
+}
+
+.status-bar .green {
+    color: var(--green);
+}
+
+.status-bar-right {
+    color: var(--dim);
+}
+
+.status-bar-right .brand {
+    color: var(--green);
+}
+
+/* Terminal Container */
+.terminal {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+}
+
+/* Logo Area */
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.logo-area img {
+    width: 80px;
+    height: 80px;
+    image-rendering: pixelated;
+}
+
+.logo-text .brand-label {
+    font-size: 0.75rem;
+    color: var(--green);
+    letter-spacing: 0.1em;
+}
+
+.logo-text h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1;
+    letter-spacing: 0.05em;
+}
+
+.logo-text .subtitle {
+    font-size: 0.85rem;
+    color: var(--grey);
+    margin-top: 0.2rem;
+}
+
+/* Separator */
+.separator {
+    border: none;
+    border-top: 1px solid #222;
+    margin: 1.5rem 0;
+}
+
+/* Command Lines */
+.cmd {
+    margin-bottom: 1.5rem;
+}
+
+.cmd .prompt {
+    color: var(--green);
+    font-weight: 700;
+}
+
+.cmd .command {
+    color: var(--green);
+}
+
+.cmd .path {
+    color: var(--green);
+}
+
+.cmd .flag {
+    color: var(--grey);
+}
+
+/* Output blocks */
+.output {
+    padding-left: 1rem;
+    margin-top: 0.3rem;
+}
+
+.output .service-name,
+.output .project-name {
+    color: var(--green);
+    font-weight: 700;
+}
+
+.output .description {
+    color: var(--grey);
+}
+
+.output .dim {
+    color: var(--dim);
+}
+
+/* Project listing */
+.project-row {
+    margin-bottom: 0.3rem;
+}
+
+.project-row .permissions {
+    color: var(--dim);
+    font-size: 0.8rem;
+}
+
+/* Services listing */
+.service-list {
+    display: inline;
+}
+
+.service-list .service-item {
+    margin-right: 0.5rem;
+}
+
+/* Contact output */
+.contact-line {
+    margin-bottom: 0.2rem;
+}
+
+.contact-line .label {
+    color: var(--dim);
+}
+
+.contact-line .value {
+    color: var(--green);
+}
+
+/* Section headers (whoami style) */
+.section-header {
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+/* Service detail blocks */
+.service-block {
+    margin-bottom: 1.2rem;
+    padding-left: 1rem;
+}
+
+.service-block .name {
+    color: var(--green);
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.service-block .desc {
+    color: var(--grey);
+    padding-left: 1rem;
+    margin-top: 0.2rem;
+}
+
+/* Blinking Cursor */
+.cursor-line {
+    margin-top: 2rem;
+}
+
+.cursor-line .prompt {
+    color: var(--green);
+    font-weight: 700;
+}
+
+.blink {
+    display: inline-block;
+    width: 0.55em;
+    height: 1.1em;
+    background: var(--green);
+    vertical-align: text-bottom;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Navigation */
+.nav-links {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #222;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: var(--green);
+    font-size: 0.85rem;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Mailto link */
+a.email-link {
+    color: var(--green);
+    font-weight: 700;
+}
+
+/* Ping response */
+.ping-response {
+    color: var(--grey);
+    padding-left: 1rem;
+    margin-top: 0.3rem;
+}
+
+.ping-response .green {
+    color: var(--green);
+}
+
+/* Philosophy / text blocks */
+.text-block {
+    padding-left: 1rem;
+    margin-top: 0.3rem;
+    color: var(--grey);
+    max-width: 65ch;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .status-bar {
+        flex-direction: column;
+        gap: 0.3rem;
+        text-align: center;
+        padding: 0.5rem 1rem;
+    }
+
+    .terminal {
+        padding: 1.5rem 1rem 3rem;
+    }
+
+    .logo-area {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .logo-text h1 {
+        font-size: 2rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .output, .service-block .desc, .text-block {
+        padding-left: 0.5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    body {
+        font-size: 0.8rem;
+    }
+
+    .logo-text h1 {
+        font-size: 1.6rem;
+    }
+
+    .logo-area img {
+        width: 60px;
+        height: 60px;
+    }
+}
