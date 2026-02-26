@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- 01001011 Stam - Binary sequence forms the S -->
+  <rect width="100" height="100" fill="#0D1117"/>
+  
+  <!-- Background rain with 01001011 pattern repeating -->
+  <g fill="#00FF41" font-family="monospace" font-size="6" opacity="0.12">
+    <text x="8" y="12">0</text><text x="8" y="22">1</text><text x="8" y="32">0</text><text x="8" y="42">0</text><text x="8" y="52">1</text><text x="8" y="62">0</text><text x="8" y="72">1</text><text x="8" y="82">1</text><text x="8" y="92">0</text>
+    <text x="18" y="8">1</text><text x="18" y="18">0</text><text x="18" y="28">0</text><text x="18" y="38">1</text><text x="18" y="48">0</text><text x="18" y="58">1</text><text x="18" y="68">1</text><text x="18" y="78">0</text><text x="18" y="88">1</text>
+    <text x="82" y="10">0</text><text x="82" y="20">1</text><text x="82" y="30">0</text><text x="82" y="40">0</text><text x="82" y="50">1</text><text x="82" y="60">0</text><text x="82" y="70">1</text><text x="82" y="80">1</text><text x="82" y="90">0</text>
+    <text x="92" y="15">1</text><text x="92" y="25">0</text><text x="92" y="35">0</text><text x="92" y="45">1</text><text x="92" y="55">0</text><text x="92" y="65">1</text><text x="92" y="75">1</text><text x="92" y="85">0</text>
+  </g>
+  
+  <!-- Glow filter -->
+  <defs>
+    <filter id="glow56">
+      <feGaussianBlur stdDeviation="1.8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Main S shape spelling 01001011 -->
+  <g fill="#00FF41" font-family="monospace" font-size="14" filter="url(#glow56)">
+    <!-- Top of S: 0 1 0 0 -->
+    <text x="30" y="24">0</text>
+    <text x="42" y="24">1</text>
+    <text x="54" y="24">0</text>
+    <text x="66" y="24">0</text>
+    
+    <!-- Left curve down: 1 -->
+    <text x="26" y="38">1</text>
+    
+    <!-- Middle bar: 0 1 -->
+    <text x="38" y="52">0</text>
+    <text x="52" y="52">1</text>
+    
+    <!-- Right curve down: 1 -->
+    <text x="66" y="66">1</text>
+    
+    <!-- Bottom of S (repeating start): 0 1 0 0 -->
+    <text x="26" y="80">0</text>
+    <text x="38" y="80">1</text>
+    <text x="50" y="80">0</text>
+    <text x="62" y="80">0</text>
+  </g>
+</svg>
