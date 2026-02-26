@@ -1,39 +1,97 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
-
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>stam.ooo</title>
-    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: black;
-        }
-
-        .container {
-            width: 80vw; /* Set width to 80% of the viewport width */
-            max-width: 100%; /* Ensure container does not exceed 100% of viewport width */
-            text-align: center;
-        }
-
-        img {
-            max-width: 100%; /* Ensure image does not exceed container width */
-            height: auto;
-        }
-    </style>
+    <title>STAM — Software Development & Digital Products</title>
+    <meta name="description" content="STAM is a Netherlands-based software development company specializing in app development, web solutions, and digital products.">
+    <meta name="author" content="Kevin Stam">
+    <meta property="og:title" content="STAM — Software Development & Digital Products">
+    <meta property="og:description" content="Netherlands-based software development company. App development, web solutions, and digital products.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://stam.ooo">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="container">
-        <img src="stam.gif" alt="Logo">
-    </div>
-</body>
 
+<div class="page-wrapper">
+
+    <nav class="nav">
+        <div class="container">
+            <a href="index.html" class="nav-logo">STAM</a>
+            <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">MENU</button>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <img src="stam.gif" alt="STAM 01001011 — Logo" class="hero-logo">
+                <p class="hero-tagline">Software Development & Digital Products</p>
+                <p class="hero-sub">Netherlands-based technology company</p>
+                <div class="hero-links">
+                    <a href="services.html" class="btn btn--primary">Our Services</a>
+                    <a href="about.html" class="btn">About STAM</a>
+                    <a href="contact.html" class="btn">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="features">
+                    <div class="feature">
+                        <h3>App Development</h3>
+                        <p>Native and cross-platform applications for iOS and Android. From concept to App Store.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Web Development</h3>
+                        <p>Modern web applications, APIs, and platforms built with scalable architecture.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Digital Products</h3>
+                        <p>E-commerce solutions and digital product creation. End-to-end development.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <span class="section-label">// About</span>
+                <div class="section-intro">
+                    <h2>Building Software That Works</h2>
+                    <p>STAM is a registered Dutch company founded by Kevin Stam, focused on delivering quality software solutions. We work with clients across the Netherlands and internationally on projects ranging from mobile apps to full-stack web platforms.</p>
+                </div>
+                <a href="about.html" class="btn">Learn More</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div>
+                <div class="footer-brand">STAM 01001011</div>
+                <div class="footer-info">
+                    Software Development & Digital Products<br>
+                    Netherlands &middot; KVK Registered
+                </div>
+            </div>
+            <div class="footer-right">
+                <a href="mailto:kevinstam@gmail.com">kevinstam@gmail.com</a><br>
+                &copy; 2024 stam.ooo
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+</body>
 </html>
