@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ReadBy — STAM</title>
+    <meta name="description" content="ReadBy: Record your voice reading stories. Play them back when you can't be there. A family reading app for iOS &amp; Android.">
+    <meta property="og:title" content="ReadBy — Record your voice. Play it back at bedtime.">
+    <meta property="og:description" content="Record yourself reading physical books to your children. Play back recordings when you can't be there.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://stam.ooo/readby">
+    <meta property="og:site_name" content="STAM">
+    <meta name="theme-color" content="#0d0d0d">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="status-bar">
+    <div>
+        <span class="dot"></span>
+        STATUS: <span class="green">ONLINE</span> &nbsp; UPTIME: <span class="green">99.9%</span> &nbsp; LOCATION: <span class="green">GLOBAL</span>
+    </div>
+    <nav class="status-nav">
+        <a href="about.html">/about</a>
+        <a href="services.html">/services</a>
+        <a href="apps.html">/apps</a>
+        <a href="contact.html">/contact</a>
+        <a href="privacy.html">/privacy</a>
+    </nav>
+</div>
+
+<div class="terminal">
+
+    <div class="cmd">
+        <span class="prompt">$ </span><span class="command">cat /apps/readby/README.md</span>
+    </div>
+
+    <div class="service-block">
+        <div class="name">readby</div>
+        <div class="desc" style="font-size: 1rem; margin-top: 0.5rem;">
+            Record your voice reading stories. Play them back when you can't be there.
+        </div>
+    </div>
+
+    <div class="cmd">
+        <span class="prompt">$ </span><span class="command">readby --describe</span>
+        <div class="text-block">
+            Parents travel. Parents work late. Parents aren't always there at bedtime.<br><br>
+            ReadBy lets you record yourself reading physical books to your children — page by page,
+            in your own voice. When you can't be there, they press play. Your voice fills the room.
+            Story time happens anyway.
+        </div>
+    </div>
+
+    <div class="cmd">
+        <span class="prompt">$ </span><span class="command">readby --features</span>
+        <div class="output">
+            <div class="project-row">
+                <span class="permissions">feature</span> <span class="project-name">voice recording</span> <span class="dim">&mdash;</span> <span class="description">record audio per page of any physical book</span>
+            </div>
+            <div class="project-row">
+                <span class="permissions">feature</span> <span class="project-name">page markers</span> <span class="dim">&mdash;</span> <span class="description">tap to mark page turns while recording</span>
+            </div>
+            <div class="project-row">
+                <span class="permissions">feature</span> <span class="project-name">book scanning</span> <span class="dim">&mdash;</span> <span class="description">scan ISBN barcode to identify books automatically</span>
+            </div>
+            <div class="project-row">
+                <span class="permissions">feature</span> <span class="project-name">family sharing</span> <span class="dim">&mdash;</span> <span class="description">share recordings with family members</span>
+            </div>
+            <div class="project-row">
+                <span class="permissions">feature</span> <span class="project-name">offline playback</span> <span class="dim">&mdash;</span> <span class="description">recordings available without internet</span>
+            </div>
+            <div class="project-row">
+                <span class="permissions">feature</span> <span class="project-name">sleep timer</span> <span class="dim">&mdash;</span> <span class="description">auto-stop after the story ends</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="cmd">
+        <span class="prompt">$ </span><span class="command">readby --stack</span>
+        <div class="output">
+            <span class="service-name">client</span> <span class="description">Flutter (iOS &amp; Android)</span><br>
+            <span class="service-name">backend</span> <span class="description">Python &middot; REST API</span><br>
+            <span class="service-name">storage</span> <span class="description">encrypted audio, per-family isolation</span>
+        </div>
+    </div>
+
+    <div class="cmd">
+        <span class="prompt">$ </span><span class="command">readby --status</span>
+        <div class="output">
+            <span class="green">IN DEVELOPMENT</span> &mdash; Launching 2026
+        </div>
+    </div>
+
+    <div class="cmd" style="margin-top: 1.5rem;">
+        <span class="prompt">$ </span><span class="command">cd /apps &amp;&amp; ls</span>
+        <div class="output">
+            <a href="apps.html" class="email-link">&larr; back to /apps</a>
+        </div>
+    </div>
+
+    <div class="cursor-line">
+        <span class="prompt">$ </span><span class="blink"></span>
+    </div>
+
+</div>
+
+</body>
+</html>
